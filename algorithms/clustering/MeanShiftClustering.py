@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 class MeanShiftClustering(object):
     """
-    Follow descriptions in https://en.wikipedia.org/wiki/DBSCAN
+    Follow descriptions in http://homepages.inf.ed.ac.uk/rbf/CVonline/LOCAL_COPIES/TUZEL1/MeanShift.pdf
     """
     def __init__(self, k, bandwidth, kernel='Gaussian', max_iter=100, eps=0.1):
         self.kernel = kernel
