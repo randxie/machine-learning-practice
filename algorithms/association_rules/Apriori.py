@@ -23,8 +23,6 @@ class Apriori(object):
 
             for i, s in enumerate(data):
                 for l in Lk:
-                    if not isinstance(l, set):
-                        print('a')
                     if l.issubset(s):
                         L_cur[str(l)] += 1
 
@@ -40,13 +38,13 @@ class Apriori(object):
 
 
 if __name__ == '__main__':
-    data = [{1,2,3,4},
-            {1,2,4},
-            {1,2},
-            {2,3,4},
-            {2,3},
-            {3,4},
-            {2,4}]
+    data = [{1, 2, 3, 4},
+            {1, 2, 4},
+            {1, 2},
+            {2, 3, 4},
+            {2, 3},
+            {3, 4},
+            {2, 4}]
 
     mdl = Apriori(support=3)
     mdl.fit(data)

@@ -37,6 +37,7 @@ class GaussianProcessRegression(object):
         plt.plot(xs, y_pred)
         plt.show()
 
+
 if __name__ == '__main__':
     t = np.arange(0, 10, 1)[:, None]
     y = np.sin(t)
