@@ -19,6 +19,7 @@ def compare_op(op1, op2):
 def infix_to_postfix_conversion(infix_expr):
     """
     Follow descriptions in http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html
+    Also known as Shunting-yard algorithms
     """
     tmp_expr = ''.join(map(lambda x: x if x not in OPERATORS else (' ' + x + ' '), infix_expr)).split()
 
