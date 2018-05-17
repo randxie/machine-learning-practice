@@ -1,13 +1,12 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-from collections import deque
 from networkx.drawing.nx_agraph import graphviz_layout
 
 class FordFulkerson(object):
     """
     Described in https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm
     """
-    def __init__(self, G, src, dest):
+    def __init__(self, G: nx.DiGraph, src: int, dest: int):
         self.G = G
         self.src = src
         self.dest = dest
@@ -28,6 +27,7 @@ class FordFulkerson(object):
             visited_nodes[cur_node] = 1
             is_exhausted = True
 
+            # add latest tuple into path
             if prev_node is not None:
                 self.path.append((prev_node, cur_node, G.get_edge_data(prev_node, cur_node)['weight']))
 
