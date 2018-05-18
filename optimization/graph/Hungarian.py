@@ -19,6 +19,10 @@ class HungarianLinearMatching(object):
         self.mtx -= col_min
 
     def find_minimum_cover(self):
+        """
+        This step might give wrong results, need more investigation
+        """
+
         # assign tasks
         N = self.mtx.shape[0]
         assign_mtx = (self.mtx == 0)
